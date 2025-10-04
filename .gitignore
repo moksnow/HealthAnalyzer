@@ -1,58 +1,67 @@
-HELP.md
-target/
-*.class
-*.jar
-*.war
-*.ear
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# =========================================
+# =============== SERVER ==================
+# =========================================
+
+# Build outputs
+server/target/
+server/*.class
+server/*.jar
+server/*.war
+server/*.ear
+
+# Maven
+server/.mvn/wrapper/maven-wrapper.jar
+
+# IDE / Build tools
+server/.apt_generated
+server/.classpath
+server/.factorypath
+server/.project
+server/.settings/
+server/.springBeans
+server/.sts4-cache
+server/*.iml
+server/.idea/
+
+# Logs
+server/logs/
+server/*.log
+
+# Ignore temporary and swap files
 *.swp
 *.swo
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/
+# =========================================
+# =============== CLIENT ==================
+# =========================================
 
 # Node / React
-node_modules/
-dist/
+client/node_modules/
+client/build/
+client/dist/
 
 # IDEs
-.idea/
+client/.idea/
+client/.vscode/
 
-# OS
+# OS Files
 .DS_Store
 Thumbs.db
 
-# === Logs ===
-logs/
-*.log
 
-# === Environment / Secrets ===
+# =========================================
+# ============= COMMON / ROOT =============
+# =========================================
+
+# Environment / Secrets
 .env
 .env.*
+
+# Miscellaneous
+*.log
+logs/
+
+# Ignore any backup or system files
+*.bak
+*.tmp
