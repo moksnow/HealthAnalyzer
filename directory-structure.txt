@@ -1,0 +1,88 @@
+PROJECT DIRECTORY STRUCTURE
+==========================
+
+demo/
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── health
+│   │   │           └── ai
+│   │   │               └── reco
+│   │   │                   └── demo
+│   │   │                       ├── config
+│   │   │                       │   ├── SecurityConfig.java
+│   │   │                       │   └── WebConfig.java
+│   │   │                       ├── controller
+│   │   │                       │   ├── AuthController.java
+│   │   │                       │   ├── ChatController.java
+│   │   │                       │   ├── FileAnalysisController.java
+│   │   │                       │   ├── FileUploadController.java
+│   │   │                       │   ├── UploadedDocumentController.java
+│   │   │                       │   ├── UserActivityController.java
+│   │   │                       │   └── UserProfileController.java
+│   │   │                       ├── filter
+│   │   │                       │   └── JwtFilter.java
+│   │   │                       ├── model
+│   │   │                       │   ├── dto
+│   │   │                       │   │   ├── login
+│   │   │                       │   │   │   ├── LoginRequest.java
+│   │   │                       │   │   │   ├── RegisterRequest.java
+│   │   │                       │   │   │   └── TokenResponse.java
+│   │   │                       │   │   ├── ChatGptRequest.java
+│   │   │                       │   │   └── ChatGptResponse.java
+│   │   │                       │   └── entity
+│   │   │                       │       ├── FileAnalysisEntity.java
+│   │   │                       │       ├── UploadedDocumentEntity.java
+│   │   │                       │       ├── UserActivityEntity.java
+│   │   │                       │       └── UserProfileEntity.java
+│   │   │                       ├── repository
+│   │   │                       │   ├── FileAnalysisRepository.java
+│   │   │                       │   ├── UploadedDocumentRepository.java
+│   │   │                       │   ├── UserActivityRepository.java
+│   │   │                       │   └── UserProfileRepository.java
+│   │   │                       ├── service
+│   │   │                       │   ├── mapper
+│   │   │                       │   │   ├── FileAnalysisMapper.java
+│   │   │                       │   │   ├── UploadedDocumentMapper.java
+│   │   │                       │   │   ├── UserActivityMapper.java
+│   │   │                       │   │   └── UserProfileMapper.java
+│   │   │                       │   ├── vo
+│   │   │                       │   │   ├── DocumentDetailsVO.java
+│   │   │                       │   │   ├── FileAnalysisVO.java
+│   │   │                       │   │   ├── UploadedDocumentVO.java
+│   │   │                       │   │   ├── UserActivityVO.java
+│   │   │                       │   │   └── UserProfileVO.java
+│   │   │                       │   ├── AuthService.java
+│   │   │                       │   ├── ChatGptService.java
+│   │   │                       │   ├── FileAnalysisService.java
+│   │   │                       │   ├── JwtService.java
+│   │   │                       │   ├── OpenRouterService.java
+│   │   │                       │   ├── UploadedDocumentService.java
+│   │   │                       │   ├── UserActivityService.java
+│   │   │                       │   ├── UserDetailsServiceImpl.java
+│   │   │                       │   └── UserProfileService.java
+│   │   │                       ├── util
+│   │   │                       │   └── TextExtractorUtil.java
+│   │   │                       └── DemoApplication.java
+│   │   └── resources
+│   │       ├── application.yml
+│   │       ├── static
+│   │       └── templates
+│   └── test
+│       └── java
+│           └── com
+│               └── health
+│                   └── ai
+│                       └── reco
+│                           └── demo
+│                               └── DemoApplicationTests.java
+├── structure_exports
+│   ├── demo_structure.xml
+│   └── main_structure.json
+├── HELP.md
+├── demo.iml
+├── directory-structure.md
+├── mvnw
+├── mvnw.cmd
+└── pom.xml

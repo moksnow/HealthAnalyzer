@@ -1,0 +1,36 @@
+# application.yml
+#openai:
+#  api:
+#    key: <FILL_YOUR_OPENAI_SECRET_KEY>
+
+openrouter:
+  api-key: <FILL_YOUR_OPENROUTER_SECRET_KEY>
+  base-url: https://openrouter.ai/api/v1/chat/completions
+  model: anthropic/claude-3-haiku
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+file:
+  upload-dir: D:\PERSONAL\Project\uploads
+
+#  "anthropic/claude-3-haiku"
+#
+#  "mistralai/mixtral-8x7b-instruct"
+#
+#  "meta-llama/llama-3-8b-instruct"
