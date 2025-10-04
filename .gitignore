@@ -7,6 +7,8 @@ target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+*.swp
+*.swo
 
 ### STS ###
 .apt_generated
@@ -46,3 +48,11 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
+
+# === Logs ===
+logs/
+*.log
+
+# === Environment / Secrets ===
+.env
+.env.*

@@ -1,28 +1,0 @@
-
-r	java:S116"QRename this field "SECRET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ά¥‹ϋÿÿÿÿ8½ΉωΡυ2
-C
-java:S1170"!Make this final field static too.(ά¥‹ϋÿÿÿÿ8½ΉωΡυ2
-X
-java:S6437"6Revoke and change this password, as it is compromised.(ΝπΉ“όÿÿÿÿ8θ°ερυ2
-T
-java:S1874"2Remove this use of "setSubject"; it is deprecated.(―Ϋβϊÿÿÿÿ8ΐΉωΡυ2
-U
-java:S1874"3Remove this use of "setIssuedAt"; it is deprecated.(Τ£µοϋÿÿÿÿ8”Òρυ2
-R
-java:S1874"5Remove this use of "setExpiration"; it is deprecated.(θ­³™8”Òρυ2
-R
-java:S1874"0Remove this use of "signWith"; it is deprecated.(ΝπΉ“όÿÿÿÿ8λ°ερυ2
-\
-java:S1874":Remove this use of "SignatureAlgorithm"; it is deprecated.(ΝπΉ“όÿÿÿÿ8μ°ερυ2
-\
-java:S1874":Remove this use of "SignatureAlgorithm"; it is deprecated.(ΝπΉ“όÿÿÿÿ8μ°ερυ2
-W
-java:S1874$"5Remove this use of "setSigningKey"; it is deprecated.(ζΔωÿÿÿÿ8ν°ερυ2
-X
-java:S1874&"6Remove this use of "parseClaimsJws"; it is deprecated.(λΩ–Ίύÿÿÿÿ8ξ°ερυ2
-Q
-java:S1874'"/Remove this use of "getBody"; it is deprecated.(θ‡ªηώÿÿÿÿ8ξ°ερυ2
-U
-java:S1128"3Remove this unused import 'io.jsonwebtoken.Claims'.(“Ύ ϊÿÿÿÿ8π°ερυ2
-\
-java:S1128":Remove this unused import 'io.jsonwebtoken.security.Keys'.(ϋ±Γϊÿÿÿÿ8π°ερυ2
