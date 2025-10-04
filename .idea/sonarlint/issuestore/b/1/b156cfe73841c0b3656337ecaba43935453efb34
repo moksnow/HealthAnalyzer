@@ -1,0 +1,11 @@
+
+j
+java:S1192/"HDefine a constant instead of duplicating this literal "content" 3 times.(Ö×Ðûüÿÿÿÿ8ç¹¦‹ó2
+h
+java:S2259;"FA "NullPointerException" could be thrown; "response" is nullable here.(Ž¢ñ‰ÿÿÿÿÿ8ý¹¦‹ó2
+l
+java:S1128"JRemove this unused import 'com.fasterxml.jackson.core.type.TypeReference'.(ãÐß¤ÿÿÿÿÿ8ˆº¦‹ó2
+e
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.databind.ObjectMapper'.(´‘¨™8ˆº¦‹ó2
+f
+java:S1128	"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿ8‰º¦‹ó2
