@@ -199,19 +199,35 @@ private String analyzeText(String text) {
 
 ## Important API endpoints (examples)
 
-> Adjust paths to match your actual controllers.
+> Use `Authorization: Bearer <token>` header for protected endpoints (where applicable).
 
-| Method | Endpoint                          | Description |
-|--------|-----------------------------------|-------------|
-| POST   | `/api/auth/register`              | Register a new user |
-| POST   | `/api/auth/login`                 | Login — returns JWT |
-| POST   | `/api/files/upload`               | Upload file for analysis |
-| GET    | `/api/files/history`              | Get user's file & analysis history |
-| GET    | `/api/files/{id}`                 | Retrieve analysis result by id |
-| POST   | `/api/files/{id}/reanalyze`       | Re-analyze a previously uploaded file |
-| GET    | `/api/admin/users`                | Admin: list users |
+| Method | Endpoint                                 | Description |
+|--------|------------------------------------------|-------------|
+| POST   | `/api/auth/register`                     | Register a new user. |
+| POST   | `/api/auth/login`                        | Login — returns JWT token. |
 
-> Use `Authorization: Bearer <token>` header for protected endpoints.
+| Method | Endpoint                                 | Description |
+|--------|------------------------------------------|-------------|
+| GET    | `/api/file-analyses/{analysesId}`        | Retrieve a file analysis result by analysis ID. |
+| GET    | `/api/file-analyses/document/{documentId}` | Retrieve analysis results associated with a specific document ID. |
+| POST   | `/api/file-analyses`                     | Create a new file analysis (kick off analysis for stored/extracted text or link to an uploaded file). |
+
+| Method | Endpoint                                 | Description |
+|--------|------------------------------------------|-------------|
+| POST (multipart/form-data) | `/api/upload`                 | Upload a file (image/pdf). Accepts multipart form-data. Returns uploaded file metadata / id. |
+| POST (multipart/form-data) | `/api/upload/reportExplain`   | Upload a report (image/pdf) and request an explanatory analysis in a single call. Consumes multipart form-data. |
+
+| Method | Endpoint                                 | Description |
+|--------|------------------------------------------|-------------|
+| GET    | `/api/user-activities/user/{userId}`     | Get activity history (uploads, analyses, re-analyses) for a specific user. |
+
+| Method | Endpoint                                 | Description |
+|--------|------------------------------------------|-------------|
+| POST   | `/api/user-profiles`                     | Create a new user profile (profile metadata separate from auth). |
+| GET    | `/api/user-profiles/{id}`                | Get a user profile by ID. |
+| PUT    | `/api/user-profiles/{id}`                | Update a user profile by ID. |
+| DELETE | `/api/user-profiles/{id}`                | Delete a user profile by ID. |
+
 
 ---
 
