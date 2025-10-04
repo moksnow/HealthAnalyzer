@@ -2,6 +2,12 @@
 
 **HealthAnalyzer** is a full-stack AI-assisted medical analysis system. It combines a **Spring Boot 3.5.6 (Java 21)** backend and a **React (Vite + TailwindCSS)** frontend to let users upload CT/MRI images and blood-test reports (JPEG/PNG/PDF), extract text via OCR / PDFBox, analyze content with AI models (OpenAI / OpenRouter / Claude), and view historical results. Authentication uses JWT and the system stores per-user file & analysis history.
 
+Designed for clinicians and patients to accelerate triage and provide clear, plain-language summaries.  
+Supports re-analysis, per-user audit trails, and admin user management for quality control and compliance.  
+Uses Tess4J (Tesseract) and Apache PDFBox for OCR/PDF parsing — ensure `eng.traineddata` is available on the server.  
+AI analysis is pluggable: swap `ChatGptService`, `OpenRouterService` or other implementations without changing core logic.  
+Default dev DB is H2; easily switch to PostgreSQL or MySQL and supply API keys via secure environment variables.
+
 ---
 
 ## Table of Contents
