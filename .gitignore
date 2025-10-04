@@ -3,6 +3,8 @@
 # =========================================
 
 # Build outputs
+*.idea
+/*.idea
 server/target/
 server/*.class
 server/*.jar
