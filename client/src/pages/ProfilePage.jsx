@@ -26,7 +26,7 @@ export default function ProfilePage() {
       .catch(console.error);
   }, [userId]);
 
-  // بارگیری فایل‌های کاربر
+  // Uploading user files
   useEffect(() => {
     if (activeTab === "history") {
       fetchWithAuth(`http://localhost:8080/api/documents/user/${userId}`, {
@@ -38,7 +38,7 @@ export default function ProfilePage() {
     }
   }, [activeTab, userId]);
 
-  // دریافت جزییات فایل انتخاب‌شده
+  // Getting details of the selected file
   const handleDocumentClick = (docId) => {
     fetchWithAuth(`http://localhost:8080/api/documents/${docId}/details`, {
       method: "GET",
@@ -52,7 +52,7 @@ export default function ProfilePage() {
   try {
     const res = await fetchWithAuth(`http://localhost:8080/api/documents/download/${documentId}`, {
       method: "GET",
-    }, token); // 👈 از useAuth بگیر یا از prop پاس بده
+    }, token); // Get it from useAuth or pass it via props
 
     if (!res.ok) {
       const errorText = await res.text();
@@ -64,11 +64,11 @@ export default function ProfilePage() {
 
     const link = document.createElement("a");
     link.href = url;
-    link.download = `document-${documentId}.pdf`; // اسم فایل دلخواه
+    link.download = `document-${documentId}.pdf`; // Desired file name
     document.body.appendChild(link);
     link.click();
     link.remove();
-    window.URL.revokeObjectURL(url); // حافظه آزاد بشه
+    window.URL.revokeObjectURL(url); // Free up memory
   } catch (err) {
     alert("Error downloading file: " + err.message);
   }
@@ -158,7 +158,7 @@ export default function ProfilePage() {
 
       {activeTab === "history" && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* لیست فایل‌ها */}
+          {/* List of files */}
           <div className="border p-4 rounded bg-gray-50">
             <h4 className="font-semibold mb-2">📁 Uploaded files:</h4>
             <ul className="space-y-2">
@@ -185,7 +185,7 @@ export default function ProfilePage() {
             </ul>
           </div>
 
-          {/* نمایش جزئیات فایل انتخاب‌شده */}
+          {/* Display details of the selected file */}
           {selectedDocumentDetails && (
             <div className="border p-4 rounded bg-gray-100">
               <h4 className="font-semibold">📄 {selectedDocumentDetails.document.fileName}</h4>

@@ -4,7 +4,7 @@ export const fetchWithAuth = async (url, options = {}, token) => {
       Authorization: `Bearer ${token}`,
     };
   
-    // فقط اگر body از نوع FormData نیست، Content-Type بذار
+    // Set Content-Type only if the body is not of type FormData
     if (!(options.body instanceof FormData)) {
       headers["Content-Type"] = "application/json";
     }
