@@ -21,7 +21,7 @@ public class UserProfileEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Long id; // به عنوان id از Identity Provider مثل Keycloak استفاده می‌شود
+    private Long id;
 
     @Column(name = "username", nullable = false, unique = true)
     private String username;
