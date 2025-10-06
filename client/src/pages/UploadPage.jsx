@@ -8,7 +8,6 @@ export default function UploadPage() {
   const [file, setFile] = useState(null);
   const { setResult } = useContext(ResultContext);
   const navigate = useNavigate();
-  // const userId = 1; // فرضاً موقت
   const { token } = useAuth();
 
   const handleUpload = async () => {
@@ -35,7 +34,6 @@ export default function UploadPage() {
       const result = await response.json();
       setResult(result);
       alert("Upload successful!");
-      // فرض اینکه API نتیجه شامل شناسه فایل است: result.id
       navigate(`/result/${result.id}`);
     } catch (error) {
       alert("Upload error: " + error.message);

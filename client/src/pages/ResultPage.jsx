@@ -34,8 +34,8 @@ export default function ResultPage() {
       .then((data) => {
         console.log(data)
         // setLocalResult(data);
-        setResult(data); // آپدیت کانتکست هم
-        setEditableText(data.extractedText || data.text || ""); // 👈 مقداردهی اولیه به editableText
+        setResult(data); // Update the context as well
+        setEditableText(data.extractedText || data.text || ""); // Initialize editableText with a default or initial value
       })
       .catch(() => navigate("/"));
 
@@ -53,8 +53,8 @@ export default function ResultPage() {
     fetchWithAuth(`http://localhost:8080/api/file-analyses`, {
       method: "POST",
       body: JSON.stringify({
-        uploadedDocumentId: documentId,     // این مهمه 👈
-        extractedText: editableText         // متن ویرایش‌شده 👈
+        uploadedDocumentId: documentId,     
+        extractedText: editableText         // Edited text
       }),
     },token)
       .then((res) => {
@@ -63,8 +63,8 @@ export default function ResultPage() {
       })
       .then((analysis) => {
         console.log("✅ Analysis Result:", analysis);
-        setAnalysis(analysis);  // فرض بر اینکه useState تحلیل رو داری
-        // رفرش لیست تحلیل‌ها
+        setAnalysis(analysis);  //  Assuming useState is imported 
+        // Refresh analysis list
         fetchWithAuth(`http://localhost:8080/api/file-analyses/document/${documentId}`, {
           method: "GET",
           }, token)

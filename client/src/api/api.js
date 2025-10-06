@@ -8,7 +8,7 @@ export async function uploadFile(file, token) {
   const res = await fetchWithAuth("http://localhost:8080/api/upload", {
     method: "POST",
     body: formData,
-    // Content-Type لازم نیست اینجا تنظیم شه چون FormData هست و مرورگر خودش multipart می‌زنه
+    //Setting Content-Type here is not necessary because it is FormData, and the browser automatically sets multipart
   }, token);
 
   if (!res.ok) {
